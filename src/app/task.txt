@@ -1,0 +1,4 @@
+login page component
+  login id, pass.
+  login btn - on press if id and pass is ri8 save to local storage (session)
+  logout -  clear string from local storage.

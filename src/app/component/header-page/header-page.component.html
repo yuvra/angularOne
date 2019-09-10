@@ -1,0 +1,13 @@
+<div class="header-container">
+  <mat-toolbar  class="header-container">
+    <div>
+      <button (click)="this.ToolbarService.setNavBar()" class="menu-btn">
+        <mat-icon [ngStyle]="{'color':'#fff'}">menu</mat-icon>
+      </button>
+    </div>
+    <div class="footer-group">My Application</div>
+    <div class="">
+      <button class="" (click)="logOut()">LogOut</button>
+    </div>
+  </mat-toolbar>
+</div>

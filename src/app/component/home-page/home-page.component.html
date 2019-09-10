@@ -1,0 +1,33 @@
+<div class="flex-container">
+  <div>
+    <button (click)="handleToolBarVisible()" class="menu-btn">
+      <mat-icon [ngStyle]="{'color':'#fff'}">menu</mat-icon>
+    </button>
+  </div>
+  <app-header-page></app-header-page>
+</div>
+
+<div class="body-container">
+  <div *ngIf="toolBarVisible" class="tool-bar">
+    <app-toolbar-page></app-toolbar-page>
+  </div>
+
+  <div *ngIf="toolBarVisible" class="body">
+    <div class="inner-body">
+      <app-body></app-body>
+    </div>
+    <div class="footer">
+      <div style="color: #fff">Footer </div>
+    </div>
+  </div>
+
+  <div *ngIf="!toolBarVisible" class="body1">
+    <div class="inner-body">
+      <app-body></app-body>
+    </div>
+    <div class="footer">
+      <div style="color: #fff">footer </div>
+    </div>
+  </div>
+
+</div>

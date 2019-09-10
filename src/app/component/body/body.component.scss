@@ -1,0 +1,79 @@
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: 50px;
+}
+
+.sideNav-container {
+  display: flex;
+}
+
+.mat-sidenav {
+  width: 300px;
+  // padding: 100px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #1976D2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+}
+.header-container > div {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+}
+
+.menu-btn {
+  background-color: transparent;
+  border-width: 0;
+}
+
+.footer-container {
+  display: flex;
+  background-color: #1976D2;
+  // margin-top: 520px;
+}
+
+.footer-group{
+  color: white;
+}
+p.big {
+  line-height: 2.8;
+}
+p.bigL{
+  font-size: 25px;
+  font-weight: bold;
+}
+.home-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+.clickedBtn {
+  background-color: #1976D2;
+}
+.notClickedBtn {
+  background-color: red;
+}

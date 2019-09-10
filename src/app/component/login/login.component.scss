@@ -1,0 +1,97 @@
+.Page {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #14548E;
+  min-height: 100vh;
+}
+
+.Header {
+  color: #ffffff;
+}
+
+.UserName {
+  display: flex;
+  flex-direction: row;
+  background-color:#ffffff;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+  min-width: 220px;
+  // margin-right: 50px;
+  padding-right: 15px;
+  // background-color: transparent;
+  border-radius: 10px;
+  border-width: 0px;
+  outline-width: 0px;
+  margin: 10px;
+  // padding: 0;
+}
+
+.UserName-input {
+  display: flex;
+  background-color: transparent;
+  min-height: 40px;
+  min-width: 200px;
+  // background-color: transparent;
+  border-radius: 10px;
+  border-width: 0px;
+  outline-width: 0px;
+  margin: 10px;
+}
+
+.Btn {
+  background-color: transparent;
+  //border: 1px;
+  // color: white;
+  // padding: 12px 16px;
+  // font-size: 16px;
+  // cursor: pointer;
+  border-color: black;
+  border-radius: 50%;
+  outline-width: 0px;
+  padding: 4px 8px;
+}
+
+.Btn:hover{
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.Spinner ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+  stroke: black;
+}
+
+.SubmitBtn {
+  display: flex;
+  background-color: #ffffff;
+  // border-color: black;
+  // border-radius: 50%;
+  outline-width: 0px;
+  padding: 4px 8px;
+  min-height: 50px;
+  min-width: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+.BtnT {
+  display: flex;
+  margin: 5px;
+  min-height: 25px;
+}
+
+.CardStyle {
+  display: flex;
+  flex-direction: column;
+  background-color: slategrey;
+  justify-content: center;
+  align-items: center;
+}

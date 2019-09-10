@@ -1,0 +1,60 @@
+<div class="sideNav-container">
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="over" opened="{{ this.ToolbarService.getNavBar() }}" class="mat-sidenav"
+      (closed)="this.sideClick()"
+    >
+      <div style="margin-top: 15px">
+        <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+
+          <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+
+            <button mat-icon-button disabled></button>
+            <div ng-class="{ 'clickedBtn' : '1' === '1' }">
+              <button mat-button (click)="leafNode(node)">
+                {{node.name}}
+              </button>
+            </div>
+          </mat-tree-node>
+
+          <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+            <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'toggle ' + node.name">
+              <mat-icon class="mat-icon-rtl-mirror">
+                {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+              </mat-icon>
+            </button>
+            {{node.name}}
+          </mat-tree-node>
+        </mat-tree>
+      </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content style="margin-top: 15px">
+      <div style="min-height: 74vh;  padding: 2px; ">
+        <div *ngIf="this.ToolbarService.getDataDisplayId() !== 0">
+          <mat-card>
+            <mat-card-content>
+              <p class="bigL">
+                {{ this.ToolbarService.getText().name | titlecase }}
+              </p>
+              <p class="big">
+                {{ this.ToolbarService.getText().txt }}
+              </p>
+            </mat-card-content>
+          </mat-card>
+          <app-code-template [name]="this.nodeName"></app-code-template>
+        </div>
+        <div *ngIf="this.ToolbarService.getDataDisplayId() == 0" class="home-page">
+          <h1>Home page</h1>
+        </div>
+      </div>
+      <div>
+        <mat-toolbar class="footer-container">
+          <div class="footer-group">
+            Footer
+          </div>
+        </mat-toolbar>
+      </div>
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

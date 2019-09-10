@@ -1,0 +1,28 @@
+.tool-bar-mat-card {
+  display: flex;
+  //width: 100%;
+  margin: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 20px;
+}
+
+.tool-bar-list {
+  display: flex;
+  flex-direction: column;
+  // overflow: scroll;
+  // margin-top: 30px;
+}
+
+.inner-card {
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+}
+.toolbar-btn {
+  background-color: transparent;
+  border-width: 0px;
+  border-color: #ffffff;
+}
