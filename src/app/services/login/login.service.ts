@@ -34,15 +34,16 @@ export class LoginService {
     console.log(this.password);
   }
 
-  isValidUser():boolean {
-    if(this.userName.trim() === 'yuvraj' && this.password.trim() === 'mane') {
-      localStorage.setItem('userName',this.userName);
-      console.log('stored');
+  isValidUser(loginForm:any):boolean {
+    console.log(loginForm);
+    if(loginForm.userName.trim() === 'yuvraj' && loginForm.password.trim() === 'mane') {
+      localStorage.setItem('userName', loginForm.userName.trim());
+      // console.log('stored');
       this.invalidUser = false;
       this.router.navigate(['/sideNav']);
       return true;
     } else {
-      console.log(this.userName,this.password);
+      // console.log(this.userName,this.password);
       this.invalidUser = true;
       return false;
     }

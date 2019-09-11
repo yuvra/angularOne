@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './component/home-page/home-page.component';
@@ -21,6 +21,8 @@ import { MatTreeModule } from '@angular/material/tree';
 import { CodeTemplateComponent } from './shared/code-template/code-template.component';
 import { LoginComponent } from './component/login/login.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { DynamicBodyDataComponent } from './component/dynamic-body-data/dynamic-body-data.component';
+import { YourFirstAppComponent } from './component/pages/your-first-app/your-first-app.component';
 
 
 @NgModule({
@@ -33,6 +35,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     SideNavMatComponent,
     CodeTemplateComponent,
     LoginComponent,
+    DynamicBodyDataComponent,
+    YourFirstAppComponent,
 
   ],
   imports: [
@@ -49,6 +53,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatToolbarModule,
     MatTreeModule,
     MatProgressSpinnerModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

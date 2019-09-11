@@ -36,9 +36,11 @@
               <p class="bigL">
                 {{ this.ToolbarService.getText().name | titlecase }}
               </p>
-              <p class="big">
+              <!-- <p class="big">
                 {{ this.ToolbarService.getText().txt }}
-              </p>
+              </p> -->
+              <app-dynamic-body-data [name]="this.nodeName"></app-dynamic-body-data>
+              <router-outlet></router-outlet>
             </mat-card-content>
           </mat-card>
           <app-code-template [name]="this.nodeName"></app-code-template>
@@ -54,7 +56,6 @@
           </div>
         </mat-toolbar>
       </div>
-
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>

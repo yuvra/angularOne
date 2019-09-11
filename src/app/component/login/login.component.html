@@ -1,70 +1,30 @@
-<!-- <div class="Page">
-  <div class="Header">
-    <h1>Sign in</h1>
-  </div>
-
-  <div>
-    <div class="UserName">
-      <input type="text" placeholder="User Name"  class="UserName-input" (keyup)="userNameOnChange($event)">
-     <div *ngIf="0" >
-        <button class="Btn">
-            <i class="material-icons">arrow_right_alt</i>
-        </button>
-     </div>
-      <div class="Spinner" *ngIf="false" >
-        <mat-spinner [diameter]="40"></mat-spinner>
+<form  [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
+  <div class="Page">
+    <mat-card class="CardStyle">
+      <div class="Header">
+        <h1>Sign in</h1>
       </div>
-    </div>
 
-    <div class="UserName" *ngIf="1" >
-      <input type="text" placeholder="Password"  class="UserName-input" (keyup)="passwordOnChange($event)">
-      <div *ngIf="0" >
-        <button class="Btn">
-            <i class="material-icons">arrow_right_alt</i>
-        </button>
+
+      <div>
+        <div class="BtnT">
+          <input type="text" placeholder="User Name" class="BtnT" formControlName="userName">
+        </div>
+        <div class="BtnT">
+          <input type="text" placeholder="Password" class="BtnT" formControlName="password">
+        </div>
       </div>
-    </div>
 
-  </div>
+      <div *ngIf="validationErr()">
+        <span style="color: crimson">Invalid Username or Password</span>
+      </div>
 
-  <div *ngIf="invalidUser" >
-    <span style="color: crimson">Invalid Username or Password</span>
-  </div>
-
-  <div *ngIf="1">
-      <button class="SubmitBtn" (click)="isValidUser()">
+      <div>
+        <button type="submit" class="SubBtn">
           Log In
-      </button>
+        </button>
+      </div>
+    </mat-card>
   </div>
-</div>
- -->
-
-<div class="Page">
-  <mat-card class="CardStyle">
-    <div class="Header">
-      <h1>Sign in</h1>
-    </div>
-
-
-    <div>
-      <div class="BtnT">
-        <input type="text" placeholder="User Name" class="BtnT" (keyup)="setUserName($event)">
-      </div>
-
-      <div class="BtnT">
-        <input type="text" placeholder="Password" class="BtnT" (keyup)="setPassword($event)">
-      </div>
-
-    </div>
-
-    <div *ngIf="validationErr()">
-      <span style="color: crimson">Invalid Username or Password</span>
-    </div>
-
-    <div>
-      <button class="SubBtn" (click)="isValidUser()">
-        Log In
-      </button>
-    </div>
-  </mat-card>
-</div>
+</form>
+<!-- <router-outlet></router-outlet> -->
