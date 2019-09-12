@@ -21,8 +21,9 @@ import { MatTreeModule } from '@angular/material/tree';
 import { CodeTemplateComponent } from './shared/code-template/code-template.component';
 import { LoginComponent } from './component/login/login.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { DynamicBodyDataComponent } from './component/dynamic-body-data/dynamic-body-data.component';
 import { YourFirstAppComponent } from './component/pages/your-first-app/your-first-app.component';
+import { PageTwoComponent } from './component/pages/page-two/page-two.component';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
@@ -35,8 +36,9 @@ import { YourFirstAppComponent } from './component/pages/your-first-app/your-fir
     SideNavMatComponent,
     CodeTemplateComponent,
     LoginComponent,
-    DynamicBodyDataComponent,
     YourFirstAppComponent,
+    PageTwoComponent,
+
 
   ],
   imports: [
@@ -53,7 +55,8 @@ import { YourFirstAppComponent } from './component/pages/your-first-app/your-fir
     MatToolbarModule,
     MatTreeModule,
     MatProgressSpinnerModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

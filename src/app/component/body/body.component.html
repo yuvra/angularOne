@@ -1,8 +1,7 @@
 <div class="sideNav-container">
   <mat-sidenav-container class="example-container">
     <mat-sidenav #sidenav mode="over" opened="{{ this.ToolbarService.getNavBar() }}" class="mat-sidenav"
-      (closed)="this.sideClick()"
-    >
+      (closed)="this.sideClick()">
       <div style="margin-top: 15px">
         <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
 
@@ -29,26 +28,17 @@
     </mat-sidenav>
 
     <mat-sidenav-content style="margin-top: 15px">
+
       <div style="min-height: 74vh;  padding: 2px; ">
-        <div *ngIf="this.ToolbarService.getDataDisplayId() !== 0">
-          <mat-card>
-            <mat-card-content>
-              <p class="bigL">
-                {{ this.ToolbarService.getText().name | titlecase }}
-              </p>
-              <!-- <p class="big">
-                {{ this.ToolbarService.getText().txt }}
-              </p> -->
-              <app-dynamic-body-data [name]="this.nodeName"></app-dynamic-body-data>
-              <router-outlet></router-outlet>
-            </mat-card-content>
-          </mat-card>
-          <app-code-template [name]="this.nodeName"></app-code-template>
-        </div>
-        <div *ngIf="this.ToolbarService.getDataDisplayId() == 0" class="home-page">
-          <h1>Home page</h1>
-        </div>
+        <div>
+        <mat-card>
+          <mat-card-content>
+            <router-outlet></router-outlet>
+          </mat-card-content>
+        </mat-card>
       </div>
+      </div>
+
       <div>
         <mat-toolbar class="footer-container">
           <div class="footer-group">
@@ -56,6 +46,8 @@
           </div>
         </mat-toolbar>
       </div>
+
     </mat-sidenav-content>
+
   </mat-sidenav-container>
 </div>

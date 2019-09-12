@@ -21,28 +21,13 @@ export class LoginComponent implements OnInit {
   });
 
   ngOnInit() {
-    if( this.LoginService.isLocalUser() ) {
-      this.router.navigate(['/sideNav']);
-    }
   }
-
-  // setUserName(event) {
-  //   this.LoginService.setUserName(event)
-  // }
-
-  // setPassword(event) {
-  //   this.LoginService.setPassword(event)
-  // }
-
-  // isValidUser() {
-  //   this.LoginService.isValidUser();
-  // }
 
   validationErr():boolean {
     return this.LoginService.invalidUser;
   }
 
   onSubmit() {
-    this.LoginService.isValidUser(this.loginForm.value);
+    this.LoginService.validateUser(this.loginForm.value);
   }
 }

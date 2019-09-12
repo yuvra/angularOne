@@ -1,30 +1,19 @@
-<form  [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
-  <div class="Page">
-    <mat-card class="CardStyle">
+<div class="Page">
+<mat-card class="CardStyle">
+  <form class="example-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
       <div class="Header">
-        <h1>Sign in</h1>
-      </div>
-
-
-      <div>
-        <div class="BtnT">
-          <input type="text" placeholder="User Name" class="BtnT" formControlName="userName">
+          <h1>Sign in</h1>
         </div>
-        <div class="BtnT">
-          <input type="text" placeholder="Password" class="BtnT" formControlName="password">
-        </div>
-      </div>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="User Name" formControlName="userName">
+      </mat-form-field>
 
-      <div *ngIf="validationErr()">
-        <span style="color: crimson">Invalid Username or Password</span>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Password" formControlName="password">
+      </mat-form-field>
+      <div class="SubBtn">
+        <button mat-raised-button  type="submit" color="primary">Log In</button>
       </div>
-
-      <div>
-        <button type="submit" class="SubBtn">
-          Log In
-        </button>
-      </div>
-    </mat-card>
-  </div>
-</form>
-<!-- <router-outlet></router-outlet> -->
+  </form>
+</mat-card>
+</div>

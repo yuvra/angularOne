@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { LoginService } from './services/login/login.service';
 
@@ -7,12 +8,17 @@ import { LoginService } from './services/login/login.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private loginService: LoginService) {
+  constructor(
+    private loginService: LoginService,
+    private router: Router,
+    ) {
   }
-  isLocal;
+
   ngOnInit() {
-    this.isLocal = localStorage.getItem("userName");
-    console.log( "1stTime",this.isLocal);
+    if (this.loginService.isLocalUser()) {
+      this.router.navigate(['/sideNav']);
+    }
   }
-  title = 'myapp1';
+
 }
+

@@ -12,48 +12,30 @@ export class LoginService {
 
   userName: string;
   password: string;
-  invalidUser = false;
+  invalidUser = true;
 
-  getUserName() {
-    return this.userName;
-  }
-
-  setUserName(event: any):void {
-    console.log("Service uName",event);
-    this.userName = event.target.value;
-    console.log(this.userName);
-  }
-
-  getPassword() {
-    return this.password;
-  }
-
-  setPassword(event: any):void {
-    console.log("Service Pass",event);
-    this.password = event.target.value;
-    console.log(this.password);
-  }
-
-  isValidUser(loginForm:any):boolean {
+  validateUser(loginForm:any):void{
     console.log(loginForm);
     if(loginForm.userName.trim() === 'yuvraj' && loginForm.password.trim() === 'mane') {
       localStorage.setItem('userName', loginForm.userName.trim());
       // console.log('stored');
       this.invalidUser = false;
       this.router.navigate(['/sideNav']);
-      return true;
+      // return true;
     } else {
       // console.log(this.userName,this.password);
       this.invalidUser = true;
-      return false;
+      // return false;
     }
   }
 
   isLocalUser():boolean {
     let localData = localStorage.getItem('userName');
     if(localData === "yuvraj") {
+      this.invalidUser = false;
       return true;
     } else {
+      this.invalidUser = true;
       return false;
     }
 

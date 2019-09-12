@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ToolbarService } from '../../services/toolBar/toolbar.service';
 import { Router } from '@angular/router'
+import { LoginService }  from '../../services/login/login.service'
 
 @Component({
   selector: 'app-header-page',
@@ -12,6 +13,7 @@ export class HeaderPageComponent implements OnInit {
   constructor(
     public ToolbarService: ToolbarService,
     private router: Router,
+    private loginService: LoginService,
   ) { }
 
   ngOnInit() {
@@ -23,6 +25,7 @@ export class HeaderPageComponent implements OnInit {
 
   logOut() {
     localStorage.clear();
+    this.loginService.invalidUser = true;
     this.router.navigate(['/login']);
   }
 }

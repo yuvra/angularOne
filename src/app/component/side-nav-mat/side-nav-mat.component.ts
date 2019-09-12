@@ -15,9 +15,6 @@ export class SideNavMatComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-      if ( !this.loginService.isLocalUser() ) {
-        this.router.navigate(['/login']);
-      }
   }
 
 }

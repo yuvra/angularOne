@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DynamicBodyDataComponent } from './dynamic-body-data.component';
+import { PageTwoComponent } from './page-two.component';
 
-describe('DynamicBodyDataComponent', () => {
-  let component: DynamicBodyDataComponent;
-  let fixture: ComponentFixture<DynamicBodyDataComponent>;
+describe('PageTwoComponent', () => {
+  let component: PageTwoComponent;
+  let fixture: ComponentFixture<PageTwoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DynamicBodyDataComponent ]
+      declarations: [ PageTwoComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DynamicBodyDataComponent);
+    fixture = TestBed.createComponent(PageTwoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
