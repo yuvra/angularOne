@@ -16,7 +16,10 @@ export class AppComponent {
 
   ngOnInit() {
     if (this.loginService.isLocalUser()) {
-      this.router.navigate(['/sideNav']);
+      console.log('hit to b unhit', this.router.url);
+      // this.router.navigate(['/sideNav']);
+    } else {
+      this.router.navigate(['/login']);
     }
   }
 

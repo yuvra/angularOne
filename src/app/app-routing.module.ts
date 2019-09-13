@@ -10,10 +10,17 @@ import { PageTwoComponent } from './component/pages/page-two/page-two.component'
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'home', component: HomePageComponent},
-  { path: 'sideNav', component: SideNavMatComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'pageOne', component: YourFirstAppComponent },
-  { path: 'pageTwo', component: PageTwoComponent }
+  // { path: 'pageOne', component: YourFirstAppComponent },
+  // { path: 'pageTwo', component: PageTwoComponent },
+  {
+    path: 'sideNav',
+    component: SideNavMatComponent,
+    children: [
+                { path: 'pageOne', component: YourFirstAppComponent },
+                { path: 'pageTwo', component: PageTwoComponent},
+              ]
+  },
 ];
 
 @NgModule({

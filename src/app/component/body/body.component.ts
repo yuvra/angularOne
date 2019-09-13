@@ -26,9 +26,7 @@ export class BodyComponent implements OnInit {
   }
 
   ngOnInit() {
-    // console.log(this.ToolbarService.getDataDisplayId());
-    this.router.navigate(['home']);
-    // console.log("NG ON");
+
   }
 
 
@@ -60,7 +58,7 @@ export class BodyComponent implements OnInit {
   }
 
   leafNode(node) {
-    console.log("leaf Node pressed!", node);
+    // console.log("leaf Node pressed!", node);
     this.ToolbarService.setDataDisplayId(node.id);
     this.nodeName = node.name;
     this.navigation(node.id);
@@ -68,9 +66,9 @@ export class BodyComponent implements OnInit {
   }
 
   navigation(id) {
-    let routeName = 'pageOne';
+    let routeName = 'sideNav/pageOne';
     if (id % 2 !== 0) {
-      routeName = "pageTwo"
+      routeName = "sideNav/pageTwo"
     }
     this.router.navigate([routeName]);
   }
