@@ -24,6 +24,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { YourFirstAppComponent } from './component/pages/your-first-app/your-first-app.component';
 import { PageTwoComponent } from './component/pages/page-two/page-two.component';
 import { MatInputModule } from '@angular/material/input';
+import { PageNotFoundComponentComponent } from './component/page-not-found-component/page-not-found-component.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -38,7 +40,7 @@ import { MatInputModule } from '@angular/material/input';
     LoginComponent,
     YourFirstAppComponent,
     PageTwoComponent,
-
+    PageNotFoundComponentComponent,
 
   ],
   imports: [
@@ -57,6 +59,7 @@ import { MatInputModule } from '@angular/material/input';
     MatProgressSpinnerModule,
     ReactiveFormsModule,
     MatInputModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
