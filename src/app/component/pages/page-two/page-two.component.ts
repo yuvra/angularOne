@@ -3,15 +3,16 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-page-two',
-  templateUrl: './page-two.component.html',
-  styleUrls: ['./page-two.component.scss']
+  templateUrl: './page-two.view.html',
+  styleUrls: ['./page-two.style.scss']
 })
 export class PageTwoComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private route: ActivatedRoute,
-  ) { }
+    private route: ActivatedRoute) {
+
+  }
 
   ngOnInit() {
   }

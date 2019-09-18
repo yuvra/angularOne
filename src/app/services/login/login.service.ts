@@ -1,16 +1,9 @@
-import { async } from '@angular/core/testing';
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from '@angular/router';
+
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Router, CanActivate, RouterStateSnapshot, ActivatedRouteSnapshot } from '@angular/router';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { map, catchError, tap } from 'rxjs/operators';
-
-const endpoint = 'http://localhost:4002/api/login';
-const httpOptions = {
-  headers: new HttpHeaders({
-    'Content-Type':  'application/json'
-  })
-};
-
+import { Observable } from 'rxjs';
+import { async } from '@angular/core/testing';
 
 @Injectable({
   providedIn: 'root'
@@ -19,48 +12,46 @@ export class LoginService {
 
   constructor(
     private router:Router,
-    private http: HttpClient,
-  ) { }
+    private http: HttpClient ) {
 
-  userName: string;
-  password: string;
-  invalidUser = true;
-
-
-  validateUser(loginForm:any):void{
-    console.log(loginForm);
-    if(loginForm.userName.trim() === 'yuvraj' && loginForm.password.trim() === 'mane') {
-      localStorage.setItem('userName', loginForm.userName.trim());
-      this.invalidUser = false;
-      this.router.navigate(['/sideNav']);
-    } else {
-      this.invalidUser = true;
-    }
   }
 
-   isLocalUser():boolean {
-    this.testApi();
-    let localData = localStorage.getItem('userName');
-    if(localData === "yuvraj") {
-      this.invalidUser = false;
+
+  async isLocalUser() {
+
+    let tokenFromServer: object;
+    await this.http.get("http://localhost:4002/api/token").toPromise().then( (d) => {
+      // console.log("Token", d);
+      tokenFromServer = d;
+      console.log("**server**Token", tokenFromServer.token);
+      console.log("**local**Token", localStorage.getItem("token"));
+    });
+    // console.log('CHK**', tokenFromServer);
+    let localData = localStorage.getItem('token');
+    if (localData === tokenFromServer.token) {
       return true;
     } else {
-      this.invalidUser = true;
+      console.log("in Else");
       return false;
     }
 
   }
 
-  testApi = async() => {
-    let data = await this.http.get(endpoint).pipe(
-      map(this.log)
-    );
-    console.log("Data From api mongo", data);
+
+  isAuthorizedUser = async (loginFormValue: any) => {
+
+    let dataFromServer;
+    await this.http.post("http://localhost:4002/api/isValid", loginFormValue).toPromise().then( (d) => {
+      dataFromServer = d;
+      // console.log("promice Resolved");
+    });
+
+    if(dataFromServer.isValid) {
+      return dataFromServer.token
+    } else {
+      return "notValid";
+    }
   }
 
-
-  log = (res: Response) => {
-    console.log("daat", res);
-  }
 }
 

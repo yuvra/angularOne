@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ToolbarService } from '../../services/toolBar/toolbar.service';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
+
 import { LoginService }  from '../../services/login/login.service'
+import { ToolbarService } from '../../services/toolBar/toolbar.service';
 
 @Component({
   selector: 'app-header-page',
-  templateUrl: './header-page.component.html',
-  styleUrls: ['./header-page.component.scss']
+  templateUrl: './header-page.view.html',
+  styleUrls: ['./header-page.style.scss']
 })
 export class HeaderPageComponent implements OnInit {
 
@@ -23,7 +24,7 @@ export class HeaderPageComponent implements OnInit {
     console.log('t p');
   }
 
-  logOut() {
+  logOut(): void {
     localStorage.clear();
     this.loginService.invalidUser = true;
     this.router.navigate(['/login']);

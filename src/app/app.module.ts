@@ -24,7 +24,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { YourFirstAppComponent } from './component/pages/your-first-app/your-first-app.component';
 import { PageTwoComponent } from './component/pages/page-two/page-two.component';
 import { MatInputModule } from '@angular/material/input';
-import { PageNotFoundComponentComponent } from './component/page-not-found-component/page-not-found-component.component';
+import { PageNotFoundComponentComponent } from './component/page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 
 

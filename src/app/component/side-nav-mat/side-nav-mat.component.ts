@@ -4,8 +4,8 @@ import { LoginService } from '../../services/login/login.service'
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-side-nav-mat',
-  templateUrl: './side-nav-mat.component.html',
-  styleUrls: ['./side-nav-mat.component.scss']
+  templateUrl: './side-nav-mat.view.html',
+  styleUrls: ['./side-nav-mat.style.scss']
 })
 export class SideNavMatComponent implements OnInit {
   constructor(

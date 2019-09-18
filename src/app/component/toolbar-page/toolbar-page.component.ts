@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+
 import { ToolbarService } from '../../services/toolBar/toolbar.service';
 
 @Component({
   selector: 'app-toolbar-page',
-  templateUrl: './toolbar-page.component.html',
-  styleUrls: ['./toolbar-page.component.scss']
+  templateUrl: './toolbar-page.view.html',
+  styleUrls: ['./toolbar-page.style.scss']
 })
 export class ToolbarPageComponent implements OnInit {
 
@@ -12,12 +13,20 @@ export class ToolbarPageComponent implements OnInit {
     public ToolbarService: ToolbarService,
   ) { }
 
+
   ngOnInit() {
   }
-  collection = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22];
 
-  renderDynBody (item) {
+
+  collection = [ 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22 ];
+
+
+  renderDynBody (item): void {
+
     this.ToolbarService.setData(item);
     console.log("item", item);
+
   }
+
+
 }

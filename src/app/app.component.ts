@@ -1,6 +1,6 @@
-import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { LoginService } from './services/login/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -14,10 +14,9 @@ export class AppComponent {
     ) {
   }
 
+
   ngOnInit() {
-    if (!this.loginService.isLocalUser()) {
-      this.router.navigate(['/login'])
-    }
+
   }
 
 }

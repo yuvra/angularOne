@@ -4,19 +4,17 @@
   bottom: 0;
   left: 0;
   right: 0;
-  // height: 100px;
-  // width: 100px;
-  margin-top: 50px;
-  // margin-bottom: 100px;
+  margin-top: 54px;
 }
 
 .sideNav-container {
   display: flex;
-  // height: 70%;
+  background-color: red;
 }
 
 .mat-sidenav {
-  width: 100px;
+  width: 300px;
+  // padding: 100px;
 }
 
 .main-container {
@@ -30,6 +28,8 @@
   flex-direction: row;
   background-color: #1976D2;
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 2;
   width: 100%;
 }
@@ -42,7 +42,6 @@
 .footer-container {
   display: flex;
   flex-direction: row;
-  // height: 10%;
   background-color: black;
 }
 
@@ -54,22 +53,16 @@
 .footer-container {
   display: flex;
   background-color: #1976D2;
+  // margin-top: 520px;
 }
 
-.footer-group{
+.footer-group {
   color: white;
 }
 
-.logOut {
-  // flex: 1;
+.home-page {
   display: flex;
-  // background-color: red;
-  // margin-left: 600px;
-  justify-content: flex-end;
-  align-items: flex-end;
-  width: 100%;
-}
-
-.btn {
-  background-color: #FF6347;
+  justify-content: center;
+  align-items: center;
+  color: black;
 }

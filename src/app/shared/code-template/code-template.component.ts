@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-code-template',
-  templateUrl: './code-template.component.html',
+  templateUrl: './code-template.view.html',
   styleUrls: ['./code-template.component.scss']
 })
 export class CodeTemplateComponent implements OnInit {
