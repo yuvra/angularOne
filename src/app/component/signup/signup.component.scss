@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  // width: 100vh;
+  // background-color: red;
+  //padding: 20%;
+}
+
+
+.body {
+ // background-color: aqua;
+ display: flex;
+ // flex: 1;
+ height: 80vh;
+ width: 120vh;
+ // padding: 50%;
+}
+
+
+.l-body {
+  //background-color: blueviolet;
+  flex: 7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.r-body {
+  background-color: brown;
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn-container {
+  display: flex;
+  background-color: black;
+}

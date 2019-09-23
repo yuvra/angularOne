@@ -8,10 +8,12 @@ import { PageNotFoundComponentComponent } from "./component/page-not-found/page-
 import { PageTwoComponent } from "./component/pages/page-two/page-two.component";
 import { SideNavMatComponent } from "./component/side-nav-mat/side-nav-mat.component";
 import { YourFirstAppComponent } from "./component/pages/your-first-app/your-first-app.component";
+import { SignupComponent } from './component/signup/signup.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/sideNav/home', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
+  { path: 'signUp', component: SignupComponent },
   {
     path: 'sideNav',
     component: SideNavMatComponent,

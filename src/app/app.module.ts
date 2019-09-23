@@ -26,6 +26,7 @@ import { PageTwoComponent } from './component/pages/page-two/page-two.component'
 import { MatInputModule } from '@angular/material/input';
 import { PageNotFoundComponentComponent } from './component/page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SignupComponent } from './component/signup/signup.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { HttpClientModule } from '@angular/common/http';
     YourFirstAppComponent,
     PageTwoComponent,
     PageNotFoundComponentComponent,
+    SignupComponent,
 
   ],
   imports: [

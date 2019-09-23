@@ -1,0 +1,31 @@
+<div class="container">
+    <mat-card>
+      <div class="body">
+        <form class="body" [formGroup]="loginForm" (ngSubmit)="onSignUpPress()" >
+            <div class="l-body">
+                <mat-card-title>
+                    Create your Account
+                </mat-card-title>
+              <mat-form-field>
+                <input matInput placeholder="user name"  formControlName="userName">
+              </mat-form-field>
+
+              <mat-form-field>
+                <input matInput placeholder="password"  formControlName="password">
+              </mat-form-field>
+
+              <span>{{this.errMsg}}</span>
+              <div class="btn-container">
+                  <!-- <button mat-raised-button color="accent">Sign in instead</button> -->
+                  <button mat-raised-button color="primary" type="submit">submit</button>
+              </div>
+
+            </div>
+
+            <div class="r-body">
+              logo
+            </div>
+        </form>
+        </div>
+    </mat-card>
+</div>

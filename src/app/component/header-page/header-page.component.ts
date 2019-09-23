@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 import { LoginService }  from '../../services/login/login.service'
+import { Router } from '@angular/router';
 import { ToolbarService } from '../../services/toolBar/toolbar.service';
 
 @Component({
@@ -26,7 +26,7 @@ export class HeaderPageComponent implements OnInit {
 
   logOut(): void {
     localStorage.clear();
-    this.loginService.invalidUser = true;
+    // this.loginService.invalidUser = true;
     this.router.navigate(['/login']);
   }
 }

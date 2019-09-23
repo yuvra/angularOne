@@ -15,9 +15,19 @@
           <input matInput placeholder="Password" formControlName="password" type="password">
         </mat-form-field>
 
+        <!-- <div>
+          err
+        </div> -->
+
+       <div class="login-signup">
         <div class="sub-btn">
           <button mat-raised-button  type="submit" color="primary">Log In</button>
         </div>
+
+        <div class="sub-btn">
+          <button mat-raised-button  (click) = "signUp()"  color="primary">Sign Up</button>
+        </div>
+       </div>
 
     </form>
 
